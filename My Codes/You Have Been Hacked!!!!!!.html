@@ -1,0 +1,182 @@
+<html>
+    <head>
+    <style>
+    body
+    {
+    background-color:#000;
+    color:#00E676;
+    font-weight:bolder;
+    text-align:center;
+    }
+    .color
+    {
+    color:#00E676;
+    font-weight: bold;
+    font-family: serif;
+    font-style: italic;
+    }
+    
+     .border
+     {
+     box-sizing: border-box;
+     border-radius: 50px;
+     border: 2px solid green;
+     }
+    </style>
+    </head>
+    <body>
+    <script src="https://unpkg.com/sweetalert2#7.1.2/dist/sweetalert2.all.js"></script>
+    <script>
+    
+    </script>
+    <div class="border"><center><h1><u>See I have hacked all your Device Information!!! </u></h1></center></div>
+       <br>
+       <u><h3>User Network Information:</h3></u>
+       <div class="color">
+       <p id="output"></p>
+       <p id="output1"></p>
+       <p id="output2"></p>
+       <p id="output3"></p>
+       <p id="output4"></p>
+       <p id="output5"></p>
+       <p id="output6"></p>
+       <p id="output7"></p>
+       <p id="output8"></p>
+       <p id="output9"></p>
+       </div>
+       <u><h3>User Device Information:</h3></u>
+       <div class="color">
+       <p id="output10"></p>
+       <p id="output11"></p>
+       <p id="output12"></p>
+       <p id="output13"></p>
+       <p id="output14"></p>
+       <p id="output15"></p>
+       <p id="output16"></p>
+       <p id="output17"></p>
+       <p id="output18"></p>
+       <p id="output19"></p>
+       <p id="output20"></p>
+       <p id="output21"></p>
+       <p id="output22"></p>
+       <p id="output23"></p>
+       <p id="output24"></p>
+       <p id="output25"></p>
+       <p id="output26"></p>
+       <p id="output battery"></p>
+       </div>
+       <u><h3>device location:</h3></u>
+       <div class="color">
+       <p id="output27"></p>
+       <p id="output28"></p>
+       <p id="output29"></p>
+       <p id="output30"></p>
+       <p id="output31"></p>
+       <p id="output32"></p>
+       <p id="output33"></p>
+       <p id="output34"></p>
+       <p id="output35"></p>
+       <p id="output36"></p>
+       <p id="output37"></p>
+       <p id="output38"></p>
+       <p id="output39"></p>
+       <p id="output40"></p>
+       </div>
+       <u><h3>Device Time And Date Information:</h3></u>
+       <div class="color">
+       <p id="output41"></p>
+       <p id="output42"></p>
+       <p id="output43"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+    <script>
+	alert("Hi Im a Hacker and Im hacking your device for a long time and finally you have been Hacked!!!!")
+alert("Don't you believe it ???")
+alert("Then See Isn't that your Information.")
+alert("Wait it will take some time to fully load as I have hacked all your information!!")
+	
+	
+	
+       function printTime()
+       {
+       var d=new Date();
+       var hours=d.getHours();
+       var minutes=d.getMinutes();
+       var seconds=d.getSeconds();
+       document.getElementById("output42").innerHTML=("Time: "+hours+":"+minutes+":"+seconds);
+       }
+       setInterval(printTime, 0);
+       function printDate()
+       {
+       var e=new Date();
+       var date= e.getDate();
+       var month=e.getMonth();
+       var year=e.getFullYear();
+       document.getElementById("output41").innerHTML=("Date: "+date+":"+month+":"+year);
+       }
+       setInterval(printDate,0)
+    document.getElementById("output21").innerHTML=("App name: "+navigator.appName);
+    document.getElementById("output22").innerHTML=("App code name: "+navigator.appCodeName);
+    document.getElementById("output23").innerHTML=("App product name: "+navigator.product);
+    document.getElementById("output24").innerHTML=("Plartform: "+navigator.platform);
+    document.getElementById("output20").innerHTML=("User device Language: "+navigator.language);
+    document.getElementById("output25").innerHTML=("Is Java enabled in the app: "+navigator.javaEnabled());
+    document.getElementById("output26").innerHTML=("Is cookies enabled: "+navigator.cookieEnabled);
+    document.getElementById("output16").innerHTML=("User screen width: "+screen.width+"px");
+    document.getElementById("output15").innerHTML=("User screen height: "+screen.height+"px");
+    document.getElementById("output17").innerHTML=("User screen color depth: "+screen.colorDepth+"bit");
+    document.getElementById("output18").innerHTML=("User screen color pixel depth: "+screen.pixelDepth+"bit");
+    document.getElementById("output9").innerHTML=("Network type: "+navigator.connection.effectiveType);
+    document.getElementById("output5").innerHTML=("connection type: "+navigator.connection.type);
+    document.getElementById("output6").innerHTML=("Network speed: "+navigator.connection.downlink+"Mbps");
+    document.getElementById("output19").innerHTML=("Number of cores in device: "+navigator.hardwareConcurrency);
+   navigator.getBattery().then(function(battery) {
+    document.getElementById("output battery").innerHTML=("Device Battery Level: "+battery.level*100+"%");
+    });
+    document.getElementById("output").innerHTML=("Date: ");
+    $.getJSON('https://api.ipify.org/?format=json').done(function(data){
+    document.getElementById("output4").innerHTML=("User IPvP4 address: "+data.ip);
+    });
+      $.getJSON('https://ipapi.co/json/').done(function(location) 
+    {
+
+
+    document.getElementById("output27").innerHTML=("User country location: "+location.country_name);
+    document.getElementById("output28").innerHTML=("User state location: "+location.region);
+    document.getElementById("output29").innerHTML=("User city location: "+location.city);
+
+    document.getElementById("output3").innerHTML=("User IP address: "+location.ip);
+    document.getElementById("output2").innerHTML=("User IP version: "+location.version);
+    document.getElementById("output").innerHTML=("User location postal code: "+location.postal);
+    document.getElementById("output7").innerHTML=("User country calling code: "+location.country_calling_code);
+    document.getElementById("output8").innerHTML=("User network operator: "+location.org);
+    document.getElementById("output30").innerHTML=("User Country capital: "+location.country_capital);
+    document.getElementById("output40").innerHTML=("Currency acceptible in User's country: "+location.currency);
+    document.getElementById("output36").innerHTML=("Name of the currency acceptible in User's country: "+location.currency_name);
+    document.getElementById("output37").innerHTML=("User country's present people's population: "+location.country_population);
+    document.getElementById("output43").innerHTML=("User location's current timezone: "+location.timezone);
+    document.getElementById("output31").innerHTML=("User region code: "+location.region_code);
+    document.getElementById("output32").innerHTML=("User location continent code: "+location.continent_code);
+    document.getElementById("output33").innerHTML=("User location country code: "+location.country_code_iso3);
+    document.getElementById("output38").innerHTML=("User location latitude: "+location.latitude);
+    document.getElementById("output39").innerHTML=("User location longitude: "+location.longitude);
+     });
+     if(navigator.onLine==true)
+     {
+     document.getElementById("output1").innerHTML=("Is device online: "+"online");
+     }
+     else if(navigator.onLine==false)
+     {
+     document.getElementById("output1").inmerHTML=("Is device online: "+"offline");
+     }
+     let a = window.navigator.userAgent;
+     b = a.split(";");
+     c = a.split(" ");
+     document.getElementById("output10").innerHTML=("User device name: "+c[4]);
+     document.getElementById("output11").innerHTML=("User device model name: "+c[5]);
+     document.getElementById("output12").innerHTML=("User device version: "+a);
+     document.getElementById("output13").innerHTML=("User device OS name: "+c[2]);
+     document.getElementById("output14").innerHTML=("User device OS version: "+b[1]);
+    </script>
+   
+</body>
+</html>

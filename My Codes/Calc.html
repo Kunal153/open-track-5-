@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="calc.css" type="text/css" href="C:\Users\KamlakarC\Desktop\Kunal\calc" media="screen"/>
+        <title>simple calculator</title>
+         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   <style>body {
+    padding:0px;
+    margin:0px;
+    background-color:#000;
+    
+   
+}
+#styleform{
+    width:250px;
+    height:405px;
+    border:5px solid #fff;
+    margin-top:25px;
+    border-radius:30px;
+    background-color:black;
+    padding:10px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+
+input{
+    width:80px;
+    height:40px;
+    background-color:white;
+    color:black;
+    border-radius:20px;
+    font-size:20px;
+    border:none;
+    outline:none ;
+    padding:3px;
+    transition-duration:0.6s;
+}
+
+input:hover{
+    border:2px solid white;
+    color:white;
+    background-color:black;
+}
+
+#styletext{
+    width:246px;
+    font-size:20px;
+    border-radius:20px;
+}
+
+#clear{
+    width:250px;
+    border-radius:20px;
+    transition-duration:0.6s;
+}
+
+#clear:hover{
+    background-color:black;
+    color:white;
+    border:2px solid white;
+}
+
+</style>
+
+   </head>
+    <body>
+         <div id="styleform">
+         <form name="calc" >
+         
+         <input type="text" name="ans" id="styletext" placeholder="0"><br><br>
+         <input type="button" value="1" onclick="calc.ans.value+='1'" class="vibrate">
+         <input type="button" value="2" onclick="calc.ans.value+='2'" class="vibrate">
+         <input type="button" value="3" onclick="calc.ans.value+='3'" class="vibrate">
+         <br><br>
+         
+         <input type="button" value="4" onclick="calc.ans.value+='4'" class="vibrate">
+         <input type="button" value="5" onclick="calc.ans.value+='5'" class="vibrate">
+         <input type="button" value="6" onclick="calc.ans.value+='6'" class="vibrate">
+         <br><br>
+         
+         <input type="button" value="7" onclick="calc.ans.value+='7'" class="vibrate">
+         <input type="button" value="8" onclick="calc.ans.value+='8'" class="vibrate">
+         <input type="button" value="9" onclick="calc.ans.value+='9'" class="vibrate">
+         <br><br>
+         
+         <input type="button" value="+" onclick="calc.ans.value+='+'" class="vibrate">
+         <input type="button" value="-" onclick="calc.ans.value+='-'" class="vibrate">
+         <input type="button" value="/" onclick="calc.ans.value+='/'" class="vibrate"><br><br>
+         
+         <input type="button" value="0" onclick="calc.ans.value+='0'" class="vibrate">
+         <input type="button" value="*" onclick="calc.ans.value+='*'" class="vibrate">
+         
+         <input type="button" value="=" onclick="calc.ans.value=eval(calc.ans.value)" class="vibrate"><br><br>
+         <input type="button"value="Clear all" onclick="calc.ans.value=''" id="clear" class="vibrate">
+         </div>
+         </form>
+         
+         </body>
+		 <script>
+
+
+$(document).ready(function(){
+    $(".vibrate").click(function(){
+        window.navigator.vibrate(70);
+     
+    });
+});
+</script>
+</html>
