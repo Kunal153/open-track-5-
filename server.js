@@ -1,19 +1,9 @@
-// Example Node.js Backend Proxy
-const express = require('express');
-const { GoogleGenAI } = require("@google/genai");
-const app = express();
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+import { GoogleGenAI } from "@google/genai";
 
-app.post('/api/chat', async (req, res) => {
-  const { prompt } = req.body;
-  const response = await ai.models.generateContent({
-    model: "gemini-2.0-flash-exp",
-    contents: prompt
-  });
-  res.json({ text: response.text });
-});   
+const ai = new GoogleGenAI({});
 
-
-
-
-
+const interaction = await ai.interactions.create({
+  model: "gemini-3.8-flash",
+  input: "Explain how AI works in a few words",
+});
+console.log(interaction.output_text);
